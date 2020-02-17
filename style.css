@@ -26,6 +26,7 @@
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .logo__star {
@@ -33,5 +34,48 @@
 }
 
 .header .wrapper {
+  height: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 8px;
+  padding: 0;
+}
+
+.navigation li {
+  font-size: 12px;
+  line-height: 6px;
+  list-style: none;
+  font-weight: bold;
+  position: relative;
+  margin-left: 29px;
+  margin-top: 8px;
+}
+
+.navigation :not(:last-child)::after {
+  content: ".";
+  display: block;
+  color: #404455;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  right: -18px;
+  top: -2px;
+}
+
+.navigation li a:hover {
+  color: #f06c64;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  height: 100%;
 }
