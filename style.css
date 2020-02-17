@@ -79,3 +79,40 @@
   text-transform: uppercase;
   height: 100%;
 }
+
+.slider {
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+  height: 595px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.phone-vertical {
+  position: relative;
+  left: 55px;
+  bottom: 20px;
+}
+
+.phone-horizontal {
+  position: relative;
+  top: 5px;
+  right: 210px;
+}
+
+.slider__button-left {
+  position: relative;
+  top: 4px;
+  left: 1px;
+  cursor: pointer;
+}
+
+.slider__button-right {
+  position: relative;
+  right: 155px;
+  top: 5px;
+  cursor: pointer;
+}
