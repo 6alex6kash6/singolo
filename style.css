@@ -120,6 +120,7 @@
 .services {
   background-color: #f2f2f2;
   height: 500px;
+  border-bottom: #ffffff 10px solid;
 }
 
 .services--description {
