@@ -78,6 +78,7 @@
 .about {
   background-color: #f2f2f2;
   border-bottom: 10px solid #ffffff;
+  height: 728px;
 }
 
 .about__header {
