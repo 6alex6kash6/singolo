@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="singolo-full.css">
 </head>
 <body>
-        <header class="header">
+        <header class="header" id='head'>
             <div class="wrapper">
                 <div class="logo">
                     <h1>Singolo<span class="logo__star">*</span></h1>
                 </div>
                 <nav class="header__navigation">
                     <ul class="navigation">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                       <li class='default home'><a href="#top" class="links">Home</a></li>
+                        <li class='default serve'><a href="#services" class="links">Services</a></li>
+                        <li class='default portfolio-scroll'><a href="#portfolio" class="links">Portfolio</a></li>
+                        <li class='default about-scroll'><a href="#about" class="links">About</a></li>
+                        <li class='default contact-scroll'><a href="#contact" class="links">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <section class="slider">
+        <section class="slider" id="slider">
             <div class="wrapper">
                 <div class="slider__button-left">
                     <img src="./assets/images/arrow_left.png" alt="" />
@@ -39,10 +39,10 @@
                 </div>
             </div>
         </section>
-        <section class="services">
-            <div class="wrapper">
+        <section class="services" id="services">
+            <div class="wrapper" >
                 <div class="services--description">
-                    <h2>Our Services</h2>
+                    <h2 >Our Services</h2>
                     <p>
                         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                         Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
@@ -118,9 +118,9 @@
                         </div>
                     </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" >
             <div class="wrapper">
-                <div class="portfolio__header">
+                <div class="portfolio__header"id="portfolio">
                     <h2>Portfolio</h2>
                     <p>
                         Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
@@ -155,7 +155,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="wrapper">
                 <div class="about__header">
                     <h2>About Us</h2>
@@ -218,7 +218,7 @@
                 </div>
             </div>
         </section>
-            <section class="contact-form">
+            <section class="contact-form" id="contact">
                 <div class="wrapper">
                     <div class="contact-form__header">
                         <h3>Get a Quote</h3>
@@ -277,5 +277,6 @@
                     </div>
                 </div>
             </footer>
+            <script src="script.js"></script>
 </body>
 </html>
