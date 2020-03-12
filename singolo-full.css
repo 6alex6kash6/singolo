@@ -18,7 +18,7 @@ html {
 
 .header {
   background-color: #2d303a;
-  height: 55px;
+  height: 95px;
   box-sizing: border-box;
   border-bottom: 6px solid #323746;
   position: sticky;
@@ -109,6 +109,24 @@ html {
   bottom: 20px;
 }
 
+.vertical-off {
+  position: absolute;
+  width: 188px;
+  height: 333px;
+  background-color: black;
+  bottom: 115px;
+  left: 16px;
+}
+
+.horizontal-off {
+  position: absolute;
+  width: 333px;
+  height: 188px;
+  background-color: black;
+  bottom: 41px;
+  left: 60px;
+}
+
 .phone-horizontal {
   position: relative;
   top: 5px;
@@ -133,6 +151,7 @@ html {
   background-color: #f2f2f2;
   height: 500px;
   border-bottom: #ffffff 10px solid;
+  scroll-margin-top: 95px;
 }
 
 .services--description {
@@ -209,6 +228,7 @@ html {
   height: 870px;
   border-bottom: 8px solid #323746;
   overflow: hidden;
+  scroll-margin-top: 95px;
 }
 
 .portfolio__header {
@@ -264,14 +284,15 @@ html {
   margin-bottom: 17px;
 }
 
-.image-wrapper img {
-  flex-basis: 15%;
+.img-active {
+  border: solid #f06c64 5px;
 }
 
 .about {
   background-color: #f2f2f2;
   border-bottom: 10px solid #ffffff;
   height: 728px;
+  scroll-margin-top: 95px;
 }
 
 .about__header {
@@ -337,6 +358,7 @@ html {
   width: 100%;
   height: 651px;
   border-bottom: 6px solid #ea676b;
+  scroll-margin-top: 95px;
 }
 
 .contact-form__header {
@@ -365,6 +387,27 @@ html {
   justify-content: space-evenly;
   position: relative;
   top: 53px;
+}
+
+#message-box {
+  position: absolute;
+  width: 100vw;
+  height: 3528px;
+  top: 0;
+  left: 0;
+  background: #0008;
+}
+
+#message-box.hidden {
+  display: none;
+}
+
+#message {
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  text-align: center;
+  background-color: #ffffff;
 }
 
 .contact-form__inputs {

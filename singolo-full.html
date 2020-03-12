@@ -29,10 +29,12 @@
                     <img src="./assets/images/arrow_left.png" alt="" />
                 </div>
                 <div class="phone-vertical">
-                    <img src="./assets/images/iPhone Vertical.png" alt="" />
+                    <img src="./assets/images/iPhone Vertical.png" alt="" id="phone-vertical"/>
+                    <div id="vertical-off"></div>
                 </div>
                 <div class="phone-horizontal">
-                    <img src="./assets/images/iPhone Horizontal.png" alt="" />
+                    <img src="./assets/images/iPhone Horizontal.png" alt="" id="phone-horizontal"/>
+                    <div id="horizontal-off"></div>
                 </div>
                 <div class="slider__button-right">
                     <img src="./assets/images/arrow_right.png" alt="" />
@@ -217,6 +219,7 @@
                     </div>
                 </div>
             </div>
+           
         </section>
             <section class="contact-form" id="contact">
                 <div class="wrapper">
@@ -230,10 +233,11 @@
                         </p>
                     </div>
                     <div class="contact-form__wrapper">
+                       
                         <form action="" class="contact-form__inputs">
-                            <input type="text" placeholder="Name" class="input" required />
-                            <input type="email" placeholder="Email" class="input" required />
-                            <input type="text" placeholder="Subject" class="input" />
+                            <input type="text" placeholder="Name" class="input" required id="name"/>
+                            <input type="email" placeholder="Email" class="input" required id="email"/>
+                            <input type="text" placeholder="Subject" class="input" id="subject"/>
                             <textarea name="comment" id="textarea" cols="30" rows="10"
                                 placeholder="Describe your project in detail..."></textarea>
                             <input type="submit" value="Submit" class="submit-button" />
@@ -263,6 +267,14 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div id="message-box" class="hidden">
+                    <div id="message">
+                        <p>Письмо отправлено</p>
+                        <p id="subj-p">Тема:<span id="subject-input"></span></p>
+                        <p id="describe-p">Описание:<span id="textarea-input"></span></p>
+                        <button id="ok-button">OK</button>
                     </div>
                 </div>
             </section>
