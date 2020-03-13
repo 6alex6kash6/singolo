@@ -5,12 +5,44 @@ const okButton = document.getElementById("ok-button");
 const verticalPhone = document.getElementById("phone-vertical");
 const horizontalPhone = document.getElementById("phone-horizontal");
 const imageWrapper = document.querySelector(".portfolio__gallery");
+const carousel = document.querySelector(".carousel");
+const previous = document.querySelector(".slider__button-left");
+const next = document.querySelector(".slider__button-right");
+const sliderWrapper = document.querySelector(".slider__wrapper");
+let direction;
 
 navigation.addEventListener("click", event => {
   navigation.querySelectorAll("a").forEach(element => {
     element.classList.remove("active");
   });
   event.target.classList.add("active");
+});
+
+next.addEventListener("click", () => {
+  direction = -1;
+  sliderWrapper.style.justifyContent = "flex-start";
+  carousel.style.transform = "translate(100%)";
+});
+
+previous.addEventListener("click", () => {
+  direction = 1;
+
+  sliderWrapper.style.justifyContent = "flex-end";
+  carousel.style.transform = "translate(-100%)";
+});
+
+carousel.addEventListener("transitionend", () => {
+  if (direction === 1) {
+    carousel.prepend(carousel.lastElementChild);
+  } else {
+    carousel.appendChild(carousel.firstElementChild);
+  }
+
+  carousel.style.transition = "none";
+  carousel.style.transform = "translate(0)";
+  setTimeout(() => {
+    carousel.style.transition = "all 0.5s";
+  }, false);
 });
 
 verticalPhone.addEventListener("click", event => {
