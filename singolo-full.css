@@ -277,7 +277,7 @@ html {
   color: #767e9e;
 }
 
-.portfolio__categories button {
+.portfolio__categories--default {
   background: rgba(0, 0, 0, 0.0001);
   border: 1px solid #666d89;
   font-style: normal;
@@ -289,8 +289,13 @@ html {
   margin-right: 8px;
 }
 
-.portfolio__categories button:hover {
+.portfolio__categories--default:hover {
   cursor: pointer;
+  border: 1px solid #c5c5c5;
+  color: #c5c5c5;
+}
+
+.portfolio__categories--active {
   border: 1px solid #c5c5c5;
   color: #c5c5c5;
 }

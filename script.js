@@ -63,6 +63,14 @@ horizontalPhone.addEventListener("click", event => {
   }
 });
 
+const portfolioButtons = document.querySelector(".portfolio__categories");
+portfolioButtons.addEventListener("click", event => {
+  portfolioButtons.querySelectorAll("button").forEach(element => {
+    element.classList.remove("portfolio__categories--active");
+  });
+  event.target.classList.add("portfolio__categories--active");
+});
+
 imageWrapper.addEventListener("click", event => {
   if (event.target.tagName === "IMG") {
     imageWrapper.querySelectorAll("img").forEach(item => {
