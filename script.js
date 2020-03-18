@@ -11,6 +11,7 @@ const next = document.querySelector(".slider__button-right");
 const sliderWrapper = document.querySelector(".slider__wrapper");
 let direction;
 
+//add color on navigation buttons
 navigation.addEventListener("click", event => {
   navigation.querySelectorAll("a").forEach(element => {
     element.classList.remove("active");
@@ -18,6 +19,7 @@ navigation.addEventListener("click", event => {
   event.target.classList.add("active");
 });
 
+//slider
 next.addEventListener("click", () => {
   direction = -1;
   sliderWrapper.style.justifyContent = "flex-start";
@@ -45,6 +47,7 @@ carousel.addEventListener("transitionend", () => {
   }, false);
 });
 
+// on-off displays on phones
 verticalPhone.addEventListener("click", event => {
   const verticalDisplay = document.getElementById("vertical-off");
   if (verticalDisplay.classList.contains("vertical-off")) {
@@ -64,13 +67,26 @@ horizontalPhone.addEventListener("click", event => {
 });
 
 const portfolioButtons = document.querySelector(".portfolio__categories");
+
 portfolioButtons.addEventListener("click", event => {
+  //active buttons
   portfolioButtons.querySelectorAll("button").forEach(element => {
     element.classList.remove("portfolio__categories--active");
   });
   event.target.classList.add("portfolio__categories--active");
+  //shuffle images
+  const gallery = document.querySelectorAll(".image-wrapper");
+  const portfolio = document.querySelectorAll(".portfolio__gallery--image");
+
+  gallery.forEach(item => {
+    const first = item.children[0];
+    const copy = first.cloneNode();
+    first.remove();
+    item.append(copy);
+  });
 });
 
+//bordered imaages
 imageWrapper.addEventListener("click", event => {
   if (event.target.tagName === "IMG") {
     imageWrapper.querySelectorAll("img").forEach(item => {
@@ -80,6 +96,7 @@ imageWrapper.addEventListener("click", event => {
   }
 });
 
+//form modal window
 submitButton.addEventListener("click", () => {
   const subject = document.getElementById("subject").value;
   const textarea = document.getElementById("textarea").value;
