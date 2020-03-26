@@ -22,15 +22,15 @@ navigation.addEventListener("click", event => {
 //slider
 next.addEventListener("click", () => {
   direction = -1;
-  sliderWrapper.style.justifyContent = "flex-start";
-  carousel.style.transform = "translate(100%)";
+  // sliderWrapper.style.justifyContent = "flex-start";
+  carousel.style.transform = "translate(120%)";
 });
 
 previous.addEventListener("click", () => {
   direction = 1;
 
-  sliderWrapper.style.justifyContent = "flex-end";
-  carousel.style.transform = "translate(-100%)";
+  // sliderWrapper.style.justifyContent = "flex-end";
+  carousel.style.transform = "translate(-120%)";
 });
 
 carousel.addEventListener("transitionend", () => {
