@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="normalize.css">
 </head>
 <body>
+    <div class="burger-menu"><span></span></div>
         <header class="header" id='head'>
-            <div class="wrapper">
+            <div class="wrapper header-wrapper" id="mobile-wrapper">
+                
+                <div class="menu-closed" id="mobile-menu">
+                   
+                    <ul class=" mobile">
+                        <li class='default home'><a href="#top" class="links">Home</a></li>
+                        <li class='default serve'><a href="#services" class="links">Services</a></li>
+                        <li class='default portfolio-scroll'><a href="#portfolio" class="links">Portfolio</a></li>
+                        <li class='default about-scroll'><a href="#about" class="links">About</a></li>
+                        <li class='default contact-scroll'><a href="#contact" class="links">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="logo">
                     <h1>Singolo<span class="logo__star">*</span></h1>
                 </div>
@@ -163,7 +175,7 @@
                 </div>
                 <div class="social">
                     <div class="social__item">
-                        <img src="assets/images/peoples/Adam.png" alt="" />
+                        <img src="assets/images/peoples/Adam.png" alt="" class='employee'/>
                         <div class="social__item--description">
                             <h3>Adam Jensen</h3>
                             <p>
@@ -179,7 +191,7 @@
                         </div>
                     </div>
                     <div class="social__item">
-                        <img src="assets/images/peoples/Desmond.png" alt="" />
+                        <img src="assets/images/peoples/Desmond.png" alt=""class='employee'/>
                         <div class="social__item--description">
                             <h3>Desmond Miles</h3>
                             <p>
@@ -195,7 +207,7 @@
                         </div>
                     </div>
                     <div class="social__item">
-                        <img src="assets/images/peoples/Scolara.png" alt="" />
+                        <img src="assets/images/peoples/Scolara.png" alt="" class='employee'/>
                         <div class="social__item--description">
                             <h3>Scolara Visari</h3>
                             <p>
@@ -215,7 +227,7 @@
            
         </section>
             <section class="contact-form" id="contact">
-                <div class="wrapper">
+                <div class="wrapper contact-wrapper">
                     <div class="contact-form__header">
                         <h3>Get a Quote</h3>
                         <p>

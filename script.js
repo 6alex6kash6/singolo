@@ -10,6 +10,27 @@ const previous = document.querySelector(".slider__button-left");
 const next = document.querySelector(".slider__button-right");
 const sliderWrapper = document.querySelector(".slider__wrapper");
 let direction;
+const mobileMenu = document.getElementById("mobile-menu");
+const burgerMenu = document.querySelector(".burger-menu");
+const mobileWrapper = document.getElementById("mobile-wrapper");
+const mobileNavButtons = document.querySelector(".mobile");
+
+mobileNavButtons.addEventListener("click", () => {
+  mobileMenu.classList.add("menu-closed");
+  burgerMenu.classList.toggle("burger-menu__open");
+});
+
+burgerMenu.addEventListener("click", event => {
+  burgerMenu.classList.toggle("burger-menu__open");
+  mobileWrapper.classList.toggle("mobile-wrapper");
+  if (mobileMenu.classList.contains("menu-closed")) {
+    mobileMenu.classList.remove("menu-closed");
+    mobileMenu.classList.add("menu-open");
+  } else if (mobileMenu.classList.contains("menu-open")) {
+    mobileMenu.classList.remove("menu-open");
+    mobileMenu.classList.add("menu-closed");
+  }
+});
 
 //add color on navigation buttons
 navigation.addEventListener("click", event => {
@@ -78,12 +99,10 @@ portfolioButtons.addEventListener("click", event => {
   const gallery = document.querySelectorAll(".image-wrapper");
   const portfolio = document.querySelectorAll(".portfolio__gallery--image");
 
-  gallery.forEach(item => {
-    const first = item.children[0];
-    const copy = first.cloneNode();
-    first.remove();
-    item.append(copy);
-  });
+  const first = portfolio[0];
+  const copy = first.cloneNode();
+  first.remove();
+  imageWrapper.appendChild(copy);
 });
 
 //bordered imaages
